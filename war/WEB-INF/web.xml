@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
+    <!--<servlet>-->
+    <!--<servlet-name>guestbook</servlet-name>-->
+    <!--<servlet-class>guestbook.GuestbookServlet</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+    <!--<servlet-name>guestbook</servlet-name>-->
+    <!--<url-pattern>/guestbook</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+    <servlet>
+        <servlet-name>sign</servlet-name>
+        <servlet-class>guestbook.SignGuestbookServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sign</servlet-name>
+        <url-pattern>/sign</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Chapter1 Servlet</servlet-name>
+        <servlet-class>com.appspot.tutorial.headfirst.servlet.Ch1Servlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Chapter1 Servlet</servlet-name>
+        <url-pattern>/Serv1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Ch3 Beer</servlet-name>
+        <servlet-class>com.tutorial.headfirst.beer.web.BeerSelect</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Ch3 Beer</servlet-name>
+        <url-pattern>/SelectBeer.do</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>guestbook.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
