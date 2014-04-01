@@ -1,0 +1,48 @@
+<html>
+<body>
+	<a href="index.html">Home</a>
+	<pre><b>First servlet code</b>
+	<br>
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Date;
+
+public class Ch1Servlet extends HttpServlet {
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException {
+	PrintWriter out = response.getWriter();
+        Date today = new Date();
+        out.println("&lthtml&gt &ltbody&gt&lth1&gt align=center>HF\'s Chapter1 Servlet" + today + '&lt/body&gt + "&lt/html&gt");
+    }
+}
+</pre>
+<br/><br/><br/>
+<pre>
+<b>Now let's create the deployement descriptor</b>
+
+&lt?xml version=”1.0” encoding=”ISO-8859-1” ?&gt
+&ltweb-app xmlns=”http://java.sun.com/xml/ns/j2ee”
+     xmlns:xsi=”http://www.w3.org/2001/XMLSchema-instance”
+     xsi:schemaLocation=”http://java.sun.com/xml/ns/j2ee 
+     http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd”
+    version=”2.4”&gt
+   &ltservlet&gt 
+     &ltservlet-name&gtChapter1 Servlet&lt/servlet-name&gt
+     &ltservlet-class&gtCh1Servlet&lt/servlet-class&gt
+   &lt/servlet&gt
+  
+   &ltservlet-mapping&gt
+     &ltservlet-name&gtChapter1 Servlet&lt/servlet-name&gt
+     &lturl-pattern&gt/Serv1&lt/url-pattern&gt
+   &lt/servlet-mapping&gt  
+&lt/web-app&gt
+</pre>
+
+<pre><b>Here is the <a href="http://localhost:8080/Serv1">result</a></b></pre>
+</body>
+<html>
