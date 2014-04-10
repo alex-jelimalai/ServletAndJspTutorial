@@ -6,8 +6,8 @@
     <style>
         .center {
             text-align: center;
-            padding-left: 40%;
-            padding-right: 40%;
+            padding-left: 35%;
+            padding-right: 35%;
         }
 
         .item {
@@ -27,8 +27,9 @@
     </p>
 
     <form class="item" action="AddTutorial.do" method="post">
-        Tutorial Name: <input type="text" name="name" size="40"><br/><br/>
-        Description: <textarea rows="4" cols="37" name="description" style="resize:none"></textarea>
+        Tutorial Name: </br><input type="text" name="name"><br/><br/>
+        Description: </br><textarea rows="4" cols="35" name="description" style="resize:none"></textarea>
+        </br>
         <input type="submit" value="Submit">
     </form>
 

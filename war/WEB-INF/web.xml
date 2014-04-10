@@ -45,7 +45,7 @@
 
     <servlet-mapping>
         <servlet-name>Add Tutorial Form</servlet-name>
-        <url-pattern>/admin</url-pattern>
+        <url-pattern>/myadmin</url-pattern>
     </servlet-mapping>
 
 
