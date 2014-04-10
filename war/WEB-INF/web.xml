@@ -38,6 +38,28 @@
         <url-pattern>/SelectBeer.do</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>Add Tutorial Form</servlet-name>
+        <jsp-file>admin/add_tutorial.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Add Tutorial Form</servlet-name>
+        <url-pattern>/admin</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>Add Tutorial</servlet-name>
+        <servlet-class>com.it_tutorial.admin.tutorial.AddTutorial</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Add Tutorial</servlet-name>
+        <url-pattern>/AddTutorial.do</url-pattern>
+    </servlet-mapping>
+
+
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>

@@ -1,8 +1,13 @@
+<!DOCTYPE html>
 <html>
+<head>
+    <link rel="stylesheet" type="text/css" href="stylesheets/mystyle.css"/>
+</head>
 <body>
-	<a href="index.html">Home</a>
-	<pre><b>First servlet code</b>
-	<br>
+<div class="center">
+    <a href="index.html">Home</a>
+    <p class="code_description">First servlet code</p>
+	<pre class="code">
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -21,16 +26,16 @@ public class Ch1Servlet extends HttpServlet {
     }
 }
 </pre>
-<br/><br/><br/>
-<pre>
-<b>Now let's create the deployement descriptor</b>
+    <br/><br/><br/>
+    <p class="code_description">Now let's create the deployement descriptor</p>
+<pre class="code">
 
-&lt?xml version=”1.0” encoding=”ISO-8859-1” ?&gt
-&ltweb-app xmlns=”http://java.sun.com/xml/ns/j2ee”
-     xmlns:xsi=”http://www.w3.org/2001/XMLSchema-instance”
-     xsi:schemaLocation=”http://java.sun.com/xml/ns/j2ee 
-     http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd”
-    version=”2.4”&gt
+&lt?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot; ?&gt
+&ltweb-app xmlns=&quot;http://java.sun.com/xml/ns/j2ee&quot;
+     xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+     xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/j2ee
+     http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd&quot;
+    version=&quot;2.4&quot;&gt
    &ltservlet&gt 
      &ltservlet-name&gtChapter1 Servlet&lt/servlet-name&gt
      &ltservlet-class&gtCh1Servlet&lt/servlet-class&gt
@@ -42,7 +47,7 @@ public class Ch1Servlet extends HttpServlet {
    &lt/servlet-mapping&gt  
 &lt/web-app&gt
 </pre>
-
-<pre><b>Here is the <a href="http://localhost:8080/Serv1">result</a></b></pre>
+    <pre><b>Here is the <a href="./Serv1">result</a></b></pre>
+</div>
 </body>
-<html>
+</html>
