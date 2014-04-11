@@ -33,7 +33,7 @@ public class AddTutorial extends HttpServlet {
         DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
         datastore.put(tutorial);
 
-        response.sendRedirect("/admin");
+        response.sendRedirect("/myadmin");
     }
 
 }

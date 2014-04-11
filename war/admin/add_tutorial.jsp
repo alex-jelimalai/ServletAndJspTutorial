@@ -7,7 +7,6 @@
         .center {
             text-align: center;
             padding-left: 35%;
-            padding-right: 35%;
         }
 
         .item {
@@ -21,7 +20,7 @@
 
 </head>
 <body>
-<div class="center">
+<div class="center" style="height:200px; width:320px;">
     <p class="item">
         <b>Put the right information:</b>
     </p>
