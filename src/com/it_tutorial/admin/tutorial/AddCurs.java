@@ -23,15 +23,17 @@ public class AddCurs extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         UserService userService = UserServiceFactory.getUserService();
         User user = userService.getCurrentUser();
+        String tutorial = request.getParameter("tutorial");
         String name = request.getParameter("name");
         String description = request.getParameter("description");
-        Entity tutorial = new Entity("tutorial");
-        tutorial.setProperty("name", name);
-        tutorial.setProperty("description", description);
-        tutorial.setProperty("user", user);
-        tutorial.setProperty("date", new Date());
+        Entity curs = new Entity("curs");
+        curs.setProperty("name", name);
+        curs.setProperty("tutorial", tutorial);
+        curs.setProperty("description", description);
+        curs.setProperty("user", user);
+        curs.setProperty("date", new Date());
         DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
-        datastore.put(tutorial);
+        datastore.put(curs);
 
         response.sendRedirect("/myadmin");
     }

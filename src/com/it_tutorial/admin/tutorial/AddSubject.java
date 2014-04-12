@@ -23,15 +23,17 @@ public class AddSubject extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         UserService userService = UserServiceFactory.getUserService();
         User user = userService.getCurrentUser();
+        String curs = request.getParameter("curs");
         String name = request.getParameter("name");
         String description = request.getParameter("description");
-        Entity tutorial = new Entity("tutorial");
-        tutorial.setProperty("name", name);
-        tutorial.setProperty("description", description);
-        tutorial.setProperty("user", user);
-        tutorial.setProperty("date", new Date());
+        Entity subject = new Entity("subject");
+        subject.setProperty("name", name);
+        subject.setProperty("curs", curs);
+        subject.setProperty("description", description);
+        subject.setProperty("user", user);
+        subject.setProperty("date", new Date());
         DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
-        datastore.put(tutorial);
+        datastore.put(subject);
 
         response.sendRedirect("/myadmin");
     }

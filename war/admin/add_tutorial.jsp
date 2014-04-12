@@ -1,12 +1,13 @@
-<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="../stylesheets/admin.css"/>
-    <title>Add New Tutorial</title>
+    <title>Add New Subject</title>
 
 </head>
 <body>
-<div class="center" style="height:200px; width:320px;">
+<div style="height:200px; width:200px;">
     <table class="base_table">
         <tr>
         <tr>
@@ -19,9 +20,9 @@
                     <b>Put the right information:</b>
                 </p>
 
-                <form class="item" action="AddTutorial.do" method="post">
+                <form class="item" action="AddSubject.do" method="post">
                     Tutorial Name: <br/><label>
-                    <input type="text" name="name">
+                    <input type="text" name="name"   style="width: 300px">
                 </label><br/><br/>
                     Description: <br/><label>
                     <textarea rows="4" cols="35" name="description" style="resize:none"></textarea>
