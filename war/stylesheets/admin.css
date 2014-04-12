@@ -1,0 +1,36 @@
+.center {
+    text-align: center;
+    padding-left: 35%;
+}
+
+.item {
+    text-align: left;
+    border: 1px solid black;
+    background: #fffcde;
+    padding: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+}
+
+a {
+    display: block;
+    width: 100px;
+    border: solid 1px #00008b;
+    background-color: #dddddd;
+    margin: 2px;
+}
+
+tr {
+    text-align: left;
+    vertical-align: text-top;
+}
+
+.base_table{
+    width: 1000;
+    text-align: center;
+
+}

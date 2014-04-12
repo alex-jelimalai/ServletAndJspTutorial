@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/admin.css"/>
     <title>Add New Tutorial</title>
-
-    <style>
-        .center {
-            text-align: center;
-            padding-left: 35%;
-        }
-
-        .item {
-            text-align: left;
-            border: 1px solid black;
-            background: #fffcde;
-            padding: 5px;
-        }
-    </style>
-
 
 </head>
 <body>
 <div class="center" style="height:200px; width:320px;">
-    <p class="item">
-        <b>Put the right information:</b>
-    </p>
+    <table class="base_table">
+        <tr>
+        <tr>
+            <td>
+                <%@include file="menu.jsp" %>
+            </td>
+            <td>
 
-    <form class="item" action="AddTutorial.do" method="post">
-        Tutorial Name: </br><input type="text" name="name"><br/><br/>
-        Description: </br><textarea rows="4" cols="35" name="description" style="resize:none"></textarea>
-        </br>
-        <input type="submit" value="Submit">
-    </form>
+                <p class="item">
+                    <b>Put the right information:</b>
+                </p>
+
+                <form class="item" action="AddTutorial.do" method="post">
+                    Tutorial Name: <br/><label>
+                    <input type="text" name="name">
+                </label><br/><br/>
+                    Description: <br/><label>
+                    <textarea rows="4" cols="35" name="description" style="resize:none"></textarea>
+                </label>
+                    <br/>
+                    <input type="submit" value="Submit">
+                </form>
+
+
+            </td>
+        </tr>
+
+    </table>
 
 </div>
 </body>

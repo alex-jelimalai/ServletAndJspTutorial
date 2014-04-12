@@ -39,12 +39,12 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>Add Tutorial Form</servlet-name>
-        <jsp-file>/admin/add_tutorial.jsp</jsp-file>
+        <servlet-name>Admin</servlet-name>
+        <jsp-file>/admin/main_admin.jsp</jsp-file>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>Add Tutorial Form</servlet-name>
+        <servlet-name>Admin</servlet-name>
         <url-pattern>/myadmin</url-pattern>
     </servlet-mapping>
 
@@ -57,6 +57,57 @@
     <servlet-mapping>
         <servlet-name>Add Tutorial</servlet-name>
         <url-pattern>/AddTutorial.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Add Curs</servlet-name>
+        <servlet-class>com.it_tutorial.admin.tutorial.AddCurs</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Add Curs</servlet-name>
+        <url-pattern>/AddCurs.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Add Subject</servlet-name>
+        <servlet-class>com.it_tutorial.admin.tutorial.AddSubject</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Add Subject</servlet-name>
+        <url-pattern>/AddSubject.do</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>Add Tutorial Form</servlet-name>
+        <jsp-file>/admin/add_tutorial.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Add Tutorial Form</servlet-name>
+        <url-pattern>/AddTutorialForm.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Add Curs Form</servlet-name>
+        <jsp-file>/admin/add_curs.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Add Curs Form</servlet-name>
+        <url-pattern>/AddCursForm.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Add Subject Form</servlet-name>
+        <jsp-file>/admin/add_subject.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Add Subject Form</servlet-name>
+        <url-pattern>/AddSubjectForm.do</url-pattern>
     </servlet-mapping>
 
 
