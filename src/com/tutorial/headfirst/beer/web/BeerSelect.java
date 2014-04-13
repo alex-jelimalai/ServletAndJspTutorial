@@ -12,11 +12,10 @@ import java.io.PrintWriter;
 import java.util.List;
 
 /**
- * User: Alexandr
- * Date: 03.03.14
- * Time: 22:38
+ * User: Alexandr Date: 03.03.14 Time: 22:38
  */
 public class BeerSelect extends HttpServlet {
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String color = req.getParameter("color");

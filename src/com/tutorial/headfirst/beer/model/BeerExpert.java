@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * User: Alexandr
- * Date: 04.03.14
- * Time: 22:34
+ * User: Alexandr Date: 04.03.14 Time: 22:34
  */
 public class BeerExpert {
 

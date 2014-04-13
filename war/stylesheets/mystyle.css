@@ -17,3 +17,23 @@
     color: #242346;
     font-weight: bold;
 }
+
+.header {
+    background-color: aqua;
+
+}
+
+.base_table {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-spacing: 0;
+}
+
+.menu-row {
+    width: 120%;
+    padding: 0;
+    background-color: #7fff00;
+    float: left;
+}

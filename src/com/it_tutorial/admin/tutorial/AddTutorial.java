@@ -15,11 +15,10 @@ import java.io.IOException;
 import java.util.Date;
 
 /**
- * User: Alexandr
- * Date: 06.04.14
- * Time: 20:47
+ * User: Alexandr Date: 06.04.14 Time: 20:47
  */
 public class AddTutorial extends HttpServlet {
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         UserService userService = UserServiceFactory.getUserService();
         User user = userService.getCurrentUser();

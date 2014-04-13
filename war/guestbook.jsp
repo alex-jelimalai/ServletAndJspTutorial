@@ -54,14 +54,14 @@
 <%
     for (Entity greeting : greetings) {
         pageContext.setAttribute("greeting_content",
-                greeting.getProperty("content"));
+                                 greeting.getProperty("content"));
         if (greeting.getProperty("user") == null) {
 %>
 <p>An anonymous person wrote:</p>
 <%
 } else {
     pageContext.setAttribute("greeting_user",
-            greeting.getProperty("user"));
+                             greeting.getProperty("user"));
 %>
 <p><b>${fn:escapeXml(greeting_user.nickname)}</b> wrote:</p>
 <%

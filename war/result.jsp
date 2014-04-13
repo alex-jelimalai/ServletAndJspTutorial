@@ -3,7 +3,7 @@
 <body>
 <h3 align="center">Beer Recommendation JSP</h3>
 <%
-    List styles = (List) request.getAttribute("styles");
+    List styles = (List)request.getAttribute("styles");
     for (Object style : styles) {
         out.println("<br> " + style);
     }
