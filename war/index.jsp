@@ -5,18 +5,16 @@
 </head>
 <body style="background-color: #d4ebee">
 
-
 <table class="base_table">
     <tr>
-        <th style="width: 25%; background-color: blue"><a href="index.jsp">Home</a></th>
-        <th>Here go your titles</th>
+        <th style="width: 25%; background-color: blue; border-radius: 5px"><a href="index.jsp"><img src="img/it_logo.png"></a></th>
+        <th class="base_title">Let's explore computer technologies</th>
     </tr>
-    <tr style="background-color: #d2f8ff">
-        <td>asd</td>
-        <td></td>
+    <tr class="big_row_table" valign="top">
+        <td style="padding-left: 10px; padding-top: 10px;  background-color: #00afff">asd</td>
+        <td style="padding-left: 50px; padding-top: 50px">Text Text</td>
     </tr>
 
 </table>
-
 </body>
 </html>

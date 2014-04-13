@@ -1,3 +1,10 @@
+.big_row_table {
+    background-color: #fff7e8;
+    font-family: Arial;
+    font-size: 12px;
+    height: 800px;
+}
+
 .code {
     text-align: left;
     background-color: rgba(47, 98, 114, 0.16);
@@ -27,13 +34,18 @@
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
     border-spacing: 0;
+    text-align: left;
+    margin-top: 100px;
+    background-color: rgba(154, 183, 255, 0.52);
 }
 
-.menu-row {
-    width: 120%;
-    padding: 0;
-    background-color: #7fff00;
-    float: left;
+.base_title{
+    text-shadow: 2px 2px 6px #0200c8 ;
+    text-align: center;
+    letter-spacing: 0.3em;
+    color: #0700ff;
+    font-size: 35;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #fff;
 }
