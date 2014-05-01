@@ -34,10 +34,10 @@
             <p class="text">Internet Protocol version 6 (IPv6) is the latest revision of the Internet Protocol (IP) and
                 the first
                 version of the protocol to be widely deployed. IPv6 was developed by the Internet Engineering Task Force
-                (IETF) to deal with the long-anticipated problem of IPv4 address exhaustion</p>
+                (IETF) to deal with the long-anticipated problem of IPv4 address exhaustion
 
-            <p>
-            <pre class="code">import javax.servlet.ServletException;
+
+            <code>import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -51,11 +51,11 @@ public class Ch1Servlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse response)
             throws ServletException, IOException {
 	PrintWriter out = response.getWriter();
-        Date today = new Date();
+        Date today = <b>new Date()</b>;
         out.println("");
     }
 }
-            </pre>
+            </code>
             </p>
         </td>
     </tr>

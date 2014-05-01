@@ -5,13 +5,21 @@
     height: 800px;
 }
 
-.code {
+code {
     text-align: left;
     background-color: rgba(47, 98, 114, 0.16);
     color: #00008b;
     border: 1px solid #3f418a;
-    padding: 20px;
-    margin: 10px;
+    border-radius: 30px;
+    border-top-left-radius: 0px;
+    padding: 10px;
+    margin: 5px;
+    white-space: pre;
+    display: block;
+    font-size: 14px;
+    font-family: courier;
+    box-shadow: 5px 5px 5px rgba(0, 13, 209, 0.74);
+
 }
 
 .center {
@@ -90,7 +98,7 @@ li a:hover {
     color: red;
 }
 
-p{
+p {
     display: block;
     -webkit-margin-before: 1em;
     -webkit-margin-after: 1em;
@@ -101,7 +109,7 @@ p{
     text-align: justify;
 }
 
-p.text{
+p.text {
     font-size: 17px;
     font-family: Helvetica, Arial, Sans-Serif;
     margin: 10px;
