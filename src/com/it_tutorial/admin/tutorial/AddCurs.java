@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.StoreFields;
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
@@ -23,15 +24,15 @@ public class AddCurs extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         UserService userService = UserServiceFactory.getUserService();
         User user = userService.getCurrentUser();
-        String tutorial = request.getParameter("tutorial");
-        String name = request.getParameter("name");
-        String description = request.getParameter("description");
-        Entity curs = new Entity("curs");
-        curs.setProperty("name", name);
-        curs.setProperty("tutorial", tutorial);
-        curs.setProperty("description", description);
-        curs.setProperty("user", user);
-        curs.setProperty("date", new Date());
+        String tutorial = request.getParameter(StoreFields.TUTORIAL);
+        String name = request.getParameter(StoreFields.NAME);
+        String description = request.getParameter(StoreFields.DESCRIPTION);
+        Entity curs = new Entity(StoreFields.CURS);
+        curs.setProperty(StoreFields.NAME, name);
+        curs.setProperty(StoreFields.TUTORIAL, tutorial);
+        curs.setProperty(StoreFields.DESCRIPTION, description);
+        curs.setProperty(StoreFields.USER, user);
+        curs.setProperty(StoreFields.DATE, new Date());
         DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
         datastore.put(curs);
 

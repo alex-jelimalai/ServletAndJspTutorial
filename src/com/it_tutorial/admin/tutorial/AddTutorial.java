@@ -1,5 +1,6 @@
 package com.it_tutorial.admin.tutorial;
 
+import com.StoreFields;
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
@@ -22,13 +23,13 @@ public class AddTutorial extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         UserService userService = UserServiceFactory.getUserService();
         User user = userService.getCurrentUser();
-        String name = request.getParameter("name");
-        String description = request.getParameter("description");
-        Entity tutorial = new Entity("tutorial");
-        tutorial.setProperty("name", name);
-        tutorial.setProperty("description", description);
-        tutorial.setProperty("user", user);
-        tutorial.setProperty("date", new Date());
+        String name = request.getParameter(StoreFields.NAME);
+        String description = request.getParameter(StoreFields.DESCRIPTION);
+        Entity tutorial = new Entity(StoreFields.TUTORIAL);
+        tutorial.setProperty(StoreFields.NAME, name);
+        tutorial.setProperty(StoreFields.DESCRIPTION, description);
+        tutorial.setProperty(StoreFields.USER, user);
+        tutorial.setProperty(StoreFields.DATE, new Date());
         DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
         datastore.put(tutorial);
 

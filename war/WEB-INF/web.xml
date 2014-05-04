@@ -110,8 +110,28 @@
         <url-pattern>/AddSubjectForm.do</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>Show Tutorials</servlet-name>
+        <servlet-class>com.it_tutorial.TutorialInfoProvider</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Show Tutorials</servlet-name>
+        <url-pattern>/ShowTutorials.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Show Courses</servlet-name>
+        <servlet-class>com.it_tutorial.CourseInfoProvider</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Show Courses</servlet-name>
+        <url-pattern>/ShowCourses.do</url-pattern>
+    </servlet-mapping>
+
 
     <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>ShowTutorials.do</welcome-file>
     </welcome-file-list>
 </web-app>

@@ -22,7 +22,7 @@
                     <b>Put the right information:</b>
                 </p>
 
-                <form class="item" action="AddSubject.do" method="post">
+                <form class="item" action="AddTutorial.do" method="post">
                     Tutorial Name: <br/><label>
                     <input type="text" name="name" style="width: 300px">
                 </label><br/><br/>
