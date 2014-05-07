@@ -15,8 +15,7 @@ import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.api.datastore.Query;
 import com.google.appengine.api.datastore.Query.FilterOperator;
 import com.google.appengine.api.datastore.Query.FilterPredicate;
-import com.google.appengine.api.users.UserService;
-import com.google.appengine.api.users.UserServiceFactory;
+import com.google.appengine.api.datastore.Text;
 import com.it_tutorial.model.Course;
 import com.it_tutorial.model.Subject;
 
@@ -26,13 +25,12 @@ import com.it_tutorial.model.Subject;
 public class AddSubject extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        UserService userService = UserServiceFactory.getUserService();
         DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
         String cursName = request.getParameter(StoreEntities.COURSE);
         Query query = new Query(StoreEntities.COURSE).setFilter(new FilterPredicate(Course.NAME, FilterOperator.EQUAL, cursName));
         Entity course = datastore.prepare(query).asSingleEntity();
         String name = request.getParameter(Subject.NAME);
-        String description = request.getParameter(Subject.DESCRIPTION);
+        Text description = new Text(request.getParameter(Subject.DESCRIPTION));
         Entity subject = new Entity(StoreEntities.SUBJECT, course.getKey());
 
         subject.setProperty(Subject.NAME, name);

@@ -12,8 +12,10 @@ import com.google.appengine.api.datastore.FetchOptions;
 import com.google.appengine.api.datastore.Query;
 import com.google.appengine.api.datastore.Query.FilterOperator;
 import com.google.appengine.api.datastore.Query.FilterPredicate;
+import com.google.appengine.api.datastore.Text;
 import com.it_tutorial.model.Course;
 import com.it_tutorial.model.Subject;
+import com.util.TagUtil;
 
 /**
  * @author Alexandr Jelimalai
@@ -37,7 +39,10 @@ public class SubjectService {
         for (Entity entity : subjectEntities) {
             Subject subject = new Subject();
             subject.setName(entity.getProperty(Subject.NAME).toString());
-            subject.setDescription(entity.getProperty(Subject.DESCRIPTION).toString());
+            String description = ((Text)entity.getProperty(Subject.DESCRIPTION)).getValue();
+            String esxapedXml = TagUtil.escapeXML(description);
+            String toCodeTag = TagUtil.toXML(TagUtil.CODE, esxapedXml);
+            subject.setDescription(toCodeTag);
             subjects.add(subject);
         }
         return subjects;
