@@ -18,27 +18,26 @@ import com.google.appengine.api.datastore.Query.FilterPredicate;
 import com.google.appengine.api.users.UserService;
 import com.google.appengine.api.users.UserServiceFactory;
 import com.it_tutorial.model.Course;
-import com.it_tutorial.model.Subject;
+import com.it_tutorial.model.Tutorial;
 
 /**
  * User: Alexandr Date: 06.04.14 Time: 20:47
  */
-public class AddSubject extends HttpServlet {
+public class AddCourse extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         UserService userService = UserServiceFactory.getUserService();
         DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
-        String cursName = request.getParameter(StoreEntities.COURSE);
-        Query query = new Query(StoreEntities.COURSE).setFilter(new FilterPredicate(Course.NAME, FilterOperator.EQUAL, cursName));
-        Entity course = datastore.prepare(query).asSingleEntity();
-        String name = request.getParameter(Subject.NAME);
-        String description = request.getParameter(Subject.DESCRIPTION);
-        Entity subject = new Entity(StoreEntities.SUBJECT, course.getKey());
-
-        subject.setProperty(Subject.NAME, name);
-        subject.setProperty(Subject.DESCRIPTION, description);
-        subject.setProperty(Subject.DATE, new Date());
-        datastore.put(subject);
+        String tutorialName = request.getParameter(StoreEntities.TUTORIAL);
+        Query query = new Query(StoreEntities.TUTORIAL).setFilter(new FilterPredicate(Tutorial.NAME, FilterOperator.EQUAL, tutorialName));
+        Entity tutorial = datastore.prepare(query).asSingleEntity();
+        String name = request.getParameter(Course.NAME);
+        String description = request.getParameter(Course.DESCRIPTION);
+        Entity course = new Entity(StoreEntities.COURSE, tutorial.getKey());
+        course.setProperty(Course.NAME, name);
+        course.setProperty(Course.DESCRIPTION, description);
+        course.setProperty(Course.DATE, new Date());
+        datastore.put(course);
         response.sendRedirect("/myadmin");
     }
 

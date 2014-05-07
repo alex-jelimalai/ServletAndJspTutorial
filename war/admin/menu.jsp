@@ -9,7 +9,7 @@
         Tutorial</a>
     </li>
     <li><a href="/AddCursForm.do">
-        Curs</a>
+        Course</a>
     </li>
     <li><a href="/AddSubjectForm.do">
         Subject</a>

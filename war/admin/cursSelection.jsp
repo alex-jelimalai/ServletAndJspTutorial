@@ -5,14 +5,14 @@
 <%@ page import="java.util.List" %>
 <%@ page import="com.google.appengine.api.datastore.Query.SortDirection" %>
 
-<select name="curs" width="300" style="width: 300px">
+<select name="course" width="300" style="width: 300px">
     <%
         {
             DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
-            Query query = new Query("curs").addSort("name", SortDirection.ASCENDING);
+            Query query = new Query("course").addSort("name", SortDirection.ASCENDING);
             List<Entity> courses = datastore.prepare(query).asList(FetchOptions.Builder.withDefaults());
-            for (final Entity curs : courses) {
-                out.println("<option>" + curs.getProperty("name") + "</option>");
+            for (final Entity course : courses) {
+                out.println("<option>" + course.getProperty("name") + "</option>");
             }
         }
     %>

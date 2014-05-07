@@ -13,16 +13,18 @@
     <tr class="big_row_table" valign="top">
         <td style="padding-left: 10px; padding-top: 10px; border-right:1px solid #bcd3d2;   background-color: #9ab7ff">
             <ul>
-                <c:forEach var="tutorial" items="${TUTORIALS}">
-                    <c:url value="ShowCourses.do" var="url">
-                        <c:param name="tutorial" value="${tutorial.name}"/>
+                <c:forEach var="course" items="${COURSES}">
+                    <c:url value="ShowSubjects.do" var="url">
+                        <c:param name="course" value="${course.name}"/>
                     </c:url>
-                    <li><a href="./${url}"><b>${tutorial.name}</b></a></li>
+                    <li><a href="./${url}"><b>${course.name}</b></a></li>
                 </c:forEach>
             </ul>
         </td>
         <td style="padding-top: 50px">
-            <jsp:include page="firstPageContain.jsp"/>
+            <p>
+                ${DESCRIPTION}
+            </p>
         </td>
     </tr>
 

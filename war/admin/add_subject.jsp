@@ -24,7 +24,7 @@
                     Select Tutorial: <br/><label>
                     <%@include file="tutorialSelection.jsp" %>
                 </label>
-                    <br/> Select Curs: <br/><label>
+                    <br/> Select Course: <br/><label>
                     <%@include file="cursSelection.jsp" %>
                 </label>
                     <br/>

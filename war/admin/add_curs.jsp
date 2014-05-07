@@ -3,7 +3,7 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="../stylesheets/admin.css"/>
-    <title>Add New Curs</title>
+    <title>Add New Course</title>
 
 </head>
 <body>
@@ -25,7 +25,7 @@
                     <%@include file="tutorialSelection.jsp" %>
                 </label>
                     <br/>
-                    Curs Name: <br/><label>
+                    Course Name: <br/><label>
                     <input type="text" name="name" style="width: 300px">
                 </label><br/><br/>
                     Description: <br/><label>

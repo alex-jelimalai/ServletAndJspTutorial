@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
-    <!--<servlet>-->
-    <!--<servlet-name>guestbook</servlet-name>-->
-    <!--<servlet-class>guestbook.GuestbookServlet</servlet-class>-->
-    <!--</servlet>-->
-    <!--<servlet-mapping>-->
-    <!--<servlet-name>guestbook</servlet-name>-->
-    <!--<url-pattern>/guestbook</url-pattern>-->
-    <!--</servlet-mapping>-->
 
     <servlet>
         <servlet-name>sign</servlet-name>
@@ -60,12 +52,12 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>Add Curs</servlet-name>
-        <servlet-class>com.it_tutorial.admin.tutorial.AddCurs</servlet-class>
+        <servlet-name>Add Course</servlet-name>
+        <servlet-class>com.it_tutorial.admin.tutorial.AddCourse</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>Add Curs</servlet-name>
+        <servlet-name>Add Course</servlet-name>
         <url-pattern>/AddCurs.do</url-pattern>
     </servlet-mapping>
 
@@ -91,12 +83,12 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>Add Curs Form</servlet-name>
+        <servlet-name>Add Course Form</servlet-name>
         <jsp-file>/admin/add_curs.jsp</jsp-file>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>Add Curs Form</servlet-name>
+        <servlet-name>Add Course Form</servlet-name>
         <url-pattern>/AddCursForm.do</url-pattern>
     </servlet-mapping>
 
@@ -112,7 +104,7 @@
 
     <servlet>
         <servlet-name>Show Tutorials</servlet-name>
-        <servlet-class>com.it_tutorial.TutorialInfoProvider</servlet-class>
+        <servlet-class>com.it_tutorial.provider.TutorialInfoProvider</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -122,12 +114,22 @@
 
     <servlet>
         <servlet-name>Show Courses</servlet-name>
-        <servlet-class>com.it_tutorial.CourseInfoProvider</servlet-class>
+        <servlet-class>com.it_tutorial.provider.CourseInfoProvider</servlet-class>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>Show Courses</servlet-name>
         <url-pattern>/ShowCourses.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Show Subject</servlet-name>
+        <servlet-class>com.it_tutorial.provider.SubjectInfoProvider</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Show Subject</servlet-name>
+        <url-pattern>/ShowSubjects.do</url-pattern>
     </servlet-mapping>
 
 

@@ -1,9 +1,9 @@
 <html>
 <head><title>Welcome to tutorials zone</title>
-    <link rel="stylesheet" type="text/css" href="stylesheets/mystyle.css"/>
+    <link rel="stylesheet" type="text/css" href="stylesheets/main.css"/>
 
 </head>
-<body style="background-color: #d4ebee">
+<body>
 <div id="topnav">
     <div id="topnavTut">
         <a class="topnav" target="_top" href="#">Home</a>
@@ -31,7 +31,7 @@
         <td style="padding-top: 50px">
             <h1 align="center">Creating first servlet</h1>
 
-            <p class="text">Internet Protocol version 6 (IPv6) is the latest revision of the Internet Protocol (IP) and
+            <p>Internet Protocol version 6 (IPv6) is the latest revision of the Internet Protocol (IP) and
                 the first
                 version of the protocol to be widely deployed. IPv6 was developed by the Internet Engineering Task Force
                 (IETF) to deal with the long-anticipated problem of IPv4 address exhaustion
@@ -61,5 +61,6 @@ public class Ch1Servlet extends HttpServlet {
     </tr>
 
 </table>
+<jsp:include page="footer.jsp"/>
 </body>
 </html>
