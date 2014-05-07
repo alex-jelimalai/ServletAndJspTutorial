@@ -29,15 +29,17 @@
             </ul>
         </td>
         <td style="padding-top: 50px">
-            <p>
-                ${DESCRIPTION}
-                <c:forEach var="subject" items="${SUBJECTS}">
-
-            <h1>${subject.name}</h1>
-
-            <p>${subject.description}</p>
+            <c:forEach var="subject" items="${SUBJECTS}" varStatus="subjectLoopCount">
+                <a href="#subject_${subjectLoopCount.count}" style="margin-left: 5px;">${subject.name}</a><br/>
             </c:forEach>
-            </p>
+            <hr>
+            <p>${DESCRIPTION} </p>
+            <c:forEach var="subject" items="${SUBJECTS}" varStatus="subjectLoopCount">
+
+                <h1 id="subject_${subjectLoopCount.count}">${subject.name}</h1>
+
+                <p>${subject.description}</p>
+            </c:forEach>
         </td>
     </tr>
 

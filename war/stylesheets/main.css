@@ -127,6 +127,16 @@ li a:hover {
     color: red;
 }
 
+a, a:visited {
+    text-decoration: none;
+    color: blue;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: red;
+}
+
 p {
     display: block;
     -webkit-margin-before: 1em;
@@ -147,6 +157,7 @@ p {
 
 body {
     background-color: #d4ebee;
+    margin: 0;
 }
 
 h1 {
