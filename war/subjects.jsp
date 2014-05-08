@@ -20,6 +20,9 @@
                     <c:choose>
                         <c:when test="${TITLE eq course.name}">
                             <li class="selected_course"><b>${course.name}</b></li>
+                            <c:forEach var="subject" items="${SUBJECTS}" varStatus="subjectLoopCount">
+                                <a href="#subject_${subjectLoopCount.count}" style="margin-left: 5px;">${subject.name}</a><br/>
+                            </c:forEach>
                         </c:when>
                         <c:otherwise>
                             <li><a href="./${url}"><b>${course.name}</b></a></li>
@@ -29,13 +32,8 @@
             </ul>
         </td>
         <td style="padding-top: 50px">
-            <c:forEach var="subject" items="${SUBJECTS}" varStatus="subjectLoopCount">
-                <a href="#subject_${subjectLoopCount.count}" style="margin-left: 5px;">${subject.name}</a><br/>
-            </c:forEach>
-            <hr>
             <p>${DESCRIPTION} </p>
             <c:forEach var="subject" items="${SUBJECTS}" varStatus="subjectLoopCount">
-
                 <h1 id="subject_${subjectLoopCount.count}">${subject.name}</h1>
 
                 <p>${subject.description}</p>

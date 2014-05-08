@@ -10,15 +10,13 @@ code {
     background-color: rgba(47, 98, 114, 0.16);
     color: #00008b;
     border: 1px solid #3f418a;
-    border-radius: 30px;
-    border-top-left-radius: 0px;
+    border-radius: 5px;
     padding: 10px;
     margin: 3px;
     white-space: pre;
     display: block;
     font-size: 14px;
     font-family: courier;
-    box-shadow: 5px 5px 5px rgba(0, 13, 209, 0.74);
     width: 695;
     margin-right: 2;
 
