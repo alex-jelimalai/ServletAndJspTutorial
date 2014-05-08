@@ -15,7 +15,7 @@ import com.it_tutorial.service.TutorialService;
  */
 public class TutorialInfoProvider extends HttpServlet {
 
-    public static final String TITLE = "Let's explore computer technologies";
+    public static final String TITLE = "Computer technologies";
     private final TutorialService tutorialService;
 
 
