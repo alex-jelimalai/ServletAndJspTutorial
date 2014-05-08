@@ -41,7 +41,7 @@ public class SubjectService {
             subject.setName(entity.getProperty(Subject.NAME).toString());
             String description = ((Text)entity.getProperty(Subject.DESCRIPTION)).getValue();
             String esxapedXml = TagUtil.escapeXML(description);
-            String toCodeTag = TagUtil.toXML(TagUtil.CODE, esxapedXml);
+            String toCodeTag = TagUtil.toXML(esxapedXml);
             subject.setDescription(toCodeTag);
             subjects.add(subject);
         }

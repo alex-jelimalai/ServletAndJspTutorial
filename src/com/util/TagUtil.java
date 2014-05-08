@@ -7,6 +7,7 @@ public class TagUtil {
 
     public static final String CODE = "code";
     private static final String END = "end";
+    private static final String NEW_LINE = "nl";
 
 
     public static String escapeXML(String str) {
@@ -14,7 +15,7 @@ public class TagUtil {
     }
 
 
-    public static String toXML(String tag, String str) {
-        return str.replaceAll("\\[" + tag + "\\]", "<" + tag + ">").replaceAll("\\[" + END + "\\]", "</" + tag + ">");
+    public static String toXML(String str) {
+        return str.replaceAll("\\[" + NEW_LINE + "\\]", "<br/>").replaceAll("\\[" + CODE + "\\]", "<" + CODE + ">").replaceAll("\\[" + END + "\\]", "</" + CODE + ">");
     }
 }
