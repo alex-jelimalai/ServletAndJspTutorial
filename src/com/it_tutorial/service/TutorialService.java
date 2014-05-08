@@ -1,19 +1,15 @@
 package com.it_tutorial.service;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
 import com.StoreEntities;
-import com.google.appengine.api.datastore.DatastoreService;
-import com.google.appengine.api.datastore.DatastoreServiceFactory;
-import com.google.appengine.api.datastore.Entity;
-import com.google.appengine.api.datastore.FetchOptions;
-import com.google.appengine.api.datastore.Query;
+import com.google.appengine.api.datastore.*;
 import com.google.appengine.api.datastore.Query.FilterOperator;
 import com.google.appengine.api.datastore.Query.FilterPredicate;
 import com.google.appengine.api.datastore.Query.SortDirection;
 import com.it_tutorial.model.Tutorial;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 /**
  * @author Alexandr Jelimalai
@@ -49,7 +45,7 @@ public class TutorialService {
     private Tutorial getTutorialFrom(Entity tutorialEntity) {
         Tutorial tutorial = new Tutorial();
         tutorial.setName(tutorialEntity.getProperty(Tutorial.NAME).toString());
-        tutorial.setDescription(tutorialEntity.getProperty(Tutorial.DESCRIPTION).toString());
+        tutorial.setDescription(((Text) tutorialEntity.getProperty(Tutorial.DESCRIPTION)).getValue());
         return tutorial;
     }
 }

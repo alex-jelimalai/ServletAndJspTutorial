@@ -1,18 +1,14 @@
 package com.it_tutorial.service;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
 import com.StoreEntities;
-import com.google.appengine.api.datastore.DatastoreService;
-import com.google.appengine.api.datastore.DatastoreServiceFactory;
-import com.google.appengine.api.datastore.Entity;
-import com.google.appengine.api.datastore.FetchOptions;
-import com.google.appengine.api.datastore.Query;
+import com.google.appengine.api.datastore.*;
 import com.google.appengine.api.datastore.Query.FilterOperator;
 import com.google.appengine.api.datastore.Query.FilterPredicate;
 import com.it_tutorial.model.Course;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 /**
  * @author Alexandr Jelimalai
@@ -53,7 +49,7 @@ public class CourseService {
     private Course getCourseFrom(Entity courseEntity) {
         Course course = new Course();
         course.setName(courseEntity.getProperty(Course.NAME).toString());
-        course.setDescription(courseEntity.getProperty(Course.DESCRIPTION).toString());
+        course.setDescription(((Text) courseEntity.getProperty(Course.DESCRIPTION)).getValue());
         return course;
     }
 

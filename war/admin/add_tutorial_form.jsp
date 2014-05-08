@@ -3,7 +3,7 @@
     <input type="text" name="name" style="width: 300px">
 </label><br/><br/>
     Description: <br/><label>
-    <textarea rows="4" cols="35" name="description" style="resize:none"></textarea>
+    <textarea rows="10" cols="50" name="description" style="resize:none"></textarea>
 </label>
     <br/>
     <input type="submit" value="Submit">

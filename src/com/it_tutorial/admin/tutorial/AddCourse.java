@@ -9,15 +9,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.StoreEntities;
-import com.google.appengine.api.datastore.DatastoreService;
-import com.google.appengine.api.datastore.DatastoreServiceFactory;
-import com.google.appengine.api.datastore.Entity;
-import com.google.appengine.api.datastore.Query;
+import com.google.appengine.api.datastore.*;
 import com.google.appengine.api.datastore.Query.FilterOperator;
 import com.google.appengine.api.datastore.Query.FilterPredicate;
 import com.google.appengine.api.users.UserService;
 import com.google.appengine.api.users.UserServiceFactory;
 import com.it_tutorial.model.Course;
+import com.it_tutorial.model.Subject;
 import com.it_tutorial.model.Tutorial;
 
 /**
@@ -32,7 +30,7 @@ public class AddCourse extends HttpServlet {
         Query query = new Query(StoreEntities.TUTORIAL).setFilter(new FilterPredicate(Tutorial.NAME, FilterOperator.EQUAL, tutorialName));
         Entity tutorial = datastore.prepare(query).asSingleEntity();
         String name = request.getParameter(Course.NAME);
-        String description = request.getParameter(Course.DESCRIPTION);
+        Text description = new Text(request.getParameter(Course.DESCRIPTION));
         Entity course = new Entity(StoreEntities.COURSE, tutorial.getKey());
         course.setProperty(Course.NAME, name);
         course.setProperty(Course.DESCRIPTION, description);
