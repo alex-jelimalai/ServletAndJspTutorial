@@ -5,14 +5,14 @@
 </head>
 <body>
 <ul>
-    <li><a href="/AddTutorialForm.do">
-        Tutorial</a>
+    <li><a href="/UpdateTutorialForm.do?page=/admin/add_tutorial_form.jsp">
+        Add Tutorial</a>
     </li>
-    <li><a href="/AddCursForm.do">
-        Course</a>
+    <li><a href="/UpdateTutorialForm.do?page=/admin/add_course_form.jsp">
+        Add Course</a>
     </li>
-    <li><a href="/AddSubjectForm.do">
-        Subject</a>
+    <li><a href="/UpdateTutorialForm.do?page=/admin/add_subject_form.jsp">
+        Add Subject</a>
     </li>
 </ul>
 

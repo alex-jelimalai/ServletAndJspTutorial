@@ -73,33 +73,13 @@
 
 
     <servlet>
-        <servlet-name>Add Tutorial Form</servlet-name>
-        <jsp-file>/admin/add_tutorial.jsp</jsp-file>
+        <servlet-name>Update Tutorial Form</servlet-name>
+        <jsp-file>/admin/update_tutorial.jsp</jsp-file>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>Add Tutorial Form</servlet-name>
-        <url-pattern>/AddTutorialForm.do</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>Add Course Form</servlet-name>
-        <jsp-file>/admin/add_curs.jsp</jsp-file>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>Add Course Form</servlet-name>
-        <url-pattern>/AddCursForm.do</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>Add Subject Form</servlet-name>
-        <jsp-file>/admin/add_subject.jsp</jsp-file>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>Add Subject Form</servlet-name>
-        <url-pattern>/AddSubjectForm.do</url-pattern>
+        <servlet-name>Update Tutorial Form</servlet-name>
+        <url-pattern>/UpdateTutorialForm.do</url-pattern>
     </servlet-mapping>
 
     <servlet>

@@ -7,10 +7,9 @@
 
 code {
     text-align: left;
-    background-color: rgba(47, 98, 114, 0.16);
-    color: #00008b;
-    border: 1px solid #3f418a;
-    border-radius: 5px;
+    background-color: rgba(238, 238, 238, 1);
+    color: #000975;
+    border-radius: 10px;
     padding: 10px;
     margin: 3px;
     white-space: pre;
@@ -45,14 +44,14 @@ code {
     border-spacing: 0;
     text-align: left;
     margin-top: 10px;
-    background-color: rgba(154, 183, 255, 0.52);
+    background-color: rgb(224, 224, 224);
 }
 
 .base_title {
     text-shadow: 2px 2px 6px #0200c8;
     text-align: center;
     letter-spacing: 0.3em;
-    color: #0700ff;
+    color: #050505;
     font-size: 35;
     height: 150px;
     -webkit-text-stroke-width: 0.5px;
@@ -81,7 +80,7 @@ a.topnav:link, a.topnav:visited {
     padding-right: 20px;
     padding-top: 5px;
     margin-top: 80px;
-    background-color: #3775d3;
+    background-color: #636363;
     text-align: right;
     font-family: monospace;
 }
@@ -96,19 +95,18 @@ a.topnav:link, a.topnav:visited {
     padding-right: 20px;
     padding-top: 5px;
     margin-top: 10px;
-    background-color: #3775d3;
+    background-color: #E4E4E4;
     text-align: center;
-    color: white;
+    color: black;
     font-family: monospace;
 }
 
 li a {
     font-size: 15px;
     text-decoration: none;
-    color: #0b1cff;
+    color: #2700C2;
     display: block;
     width: 200px;
-    -webkit-text-stroke-width: 0.25px;
     -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
     -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
     -o-transition: font-size 0.3s ease, background-color 0.3s ease;
@@ -127,10 +125,10 @@ li a:hover {
 
 a, a:visited {
     text-decoration: none;
-    color: blue;
+    color: #2700C2;
 }
 
-a:hover{
+a:hover {
     text-decoration: underline;
     color: red;
 }
@@ -154,11 +152,17 @@ p {
 }
 
 body {
-    background-color: #d4ebee;
+    background-color: #CACACA;
     margin: 0;
 }
 
 h1 {
     text-align: center;
+}
+
+#left_menu {
+    padding-left: 10px;
+    padding-top: 10px;
+    background-color: rgb(224, 224, 224);
 }
 

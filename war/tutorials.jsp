@@ -11,7 +11,7 @@
 <table class="base_table">
     <jsp:include page="header.jsp"/>
     <tr class="big_row_table" valign="top">
-        <td style="padding-left: 10px; padding-top: 10px; border-right:1px solid #bcd3d2;   background-color: #9ab7ff">
+        <td id="left_menu">
             <ul>
                 <c:forEach var="tutorial" items="${TUTORIALS}">
                     <c:url value="ShowCourses.do" var="url">

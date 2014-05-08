@@ -26,6 +26,11 @@ public class CourseService {
         datastore = DatastoreServiceFactory.getDatastoreService();
     }
 
+    public Collection<Course> getAll() {
+        Query queryCourses = new Query(StoreEntities.COURSE).addSort(Course.DATE);
+        List<Entity> courseEntities = datastore.prepare(queryCourses).asList(FetchOptions.Builder.withDefaults());
+        return getCoursesFrom(courseEntities);
+    }
 
     public Collection<Course> getByTutorial(String tutorialName) {
         Query query = new Query(StoreEntities.TUTORIAL).setFilter(new FilterPredicate(Course.NAME, FilterOperator.EQUAL, tutorialName));
