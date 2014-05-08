@@ -11,14 +11,11 @@ code {
     color: #000975;
     border-radius: 10px;
     padding: 10px;
-    margin: 3px;
     white-space: pre;
     display: block;
     font-size: 14px;
     font-family: courier;
-    width: 695;
-    margin-right: 2;
-
+    width: 894;
 }
 
 .center {
@@ -38,7 +35,7 @@ code {
 }
 
 .base_table {
-    width: 1000px;
+    width: 1200px;
     margin-left: auto;
     margin-right: auto;
     border-spacing: 0;
@@ -72,7 +69,7 @@ a.topnav:link, a.topnav:visited {
 
 #topnavTut {
     height: 20px;
-    width: 974px;
+    width: 1175px;
     margin: auto;
     word-spacing: 12px;
     font-size: 12px;
@@ -87,7 +84,7 @@ a.topnav:link, a.topnav:visited {
 
 .bottomNavTut {
     height: 20px;
-    width: 970px;
+    width: 1170px;
     margin: auto;
     word-spacing: 12px;
     font-size: 12px;
@@ -173,7 +170,7 @@ h1 {
 }
 
 #logo {
-    width: 25%;
+    width: 22%;
     border-style: dotted;
     border-width: 0 1px 1px 0;
     border-color: green;
