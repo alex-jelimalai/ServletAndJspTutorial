@@ -72,11 +72,11 @@ a.topnav:link, a.topnav:visited {
 
 #topnavTut {
     height: 20px;
-    width: 970px;
+    width: 974px;
     margin: auto;
     word-spacing: 12px;
     font-size: 12px;
-    padding-left: 10px;
+    padding-left: 5px;
     padding-right: 20px;
     padding-top: 5px;
     margin-top: 80px;
@@ -112,14 +112,15 @@ li a {
     -o-transition: font-size 0.3s ease, background-color 0.3s ease;
     -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
     transition: font-size 0.3s ease, background-color 0.3s ease;
+    margin-right: 5px;
 }
 
 li a, li.selected_course {
     margin-top: 8;
 }
 
-li a:hover {
-    background: #62f6f6;
+li:not(.selected_course):hover {
+    background: #b6b6b6;
     color: red;
 }
 
@@ -129,7 +130,7 @@ a, a:visited {
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     color: red;
 }
 
@@ -149,6 +150,11 @@ p {
     font-family: Helvetica, Arial, Sans-Serif;
     margin: 10px;
     -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+}
+
+ul {
+    width: 195px;
+    padding-left: 25px;
 }
 
 body {
