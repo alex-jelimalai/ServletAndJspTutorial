@@ -1,21 +1,16 @@
 package com.it_tutorial.service;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
 import com.StoreEntities;
-import com.google.appengine.api.datastore.DatastoreService;
-import com.google.appengine.api.datastore.DatastoreServiceFactory;
-import com.google.appengine.api.datastore.Entity;
-import com.google.appengine.api.datastore.FetchOptions;
-import com.google.appengine.api.datastore.Query;
+import com.google.appengine.api.datastore.*;
 import com.google.appengine.api.datastore.Query.FilterOperator;
 import com.google.appengine.api.datastore.Query.FilterPredicate;
-import com.google.appengine.api.datastore.Text;
 import com.it_tutorial.model.Course;
 import com.it_tutorial.model.Subject;
 import com.util.TagUtil;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 /**
  * @author Alexandr Jelimalai
@@ -39,10 +34,9 @@ public class SubjectService {
         for (Entity entity : subjectEntities) {
             Subject subject = new Subject();
             subject.setName(entity.getProperty(Subject.NAME).toString());
-            String description = ((Text)entity.getProperty(Subject.DESCRIPTION)).getValue();
-            String esxapedXml = TagUtil.escapeXML(description);
-            String toCodeTag = TagUtil.toXML(esxapedXml);
-            subject.setDescription(toCodeTag);
+            String description = ((Text) entity.getProperty(Subject.DESCRIPTION)).getValue();
+            String escapedText = TagUtil.escapeCodeXml(description);
+            subject.setDescription(escapedText);
             subjects.add(subject);
         }
         return subjects;

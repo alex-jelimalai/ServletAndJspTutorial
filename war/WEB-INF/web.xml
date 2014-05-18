@@ -112,6 +112,18 @@
         <url-pattern>/ShowSubjects.do</url-pattern>
     </servlet-mapping>
 
+    <!--head first chapters-->
+
+    <servlet>
+        <servlet-name>JarReturner</servlet-name>
+        <servlet-class>com.appspot.tutorial.headfirst.servlet.ch4.JarReturner</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>JarReturner</servlet-name>
+        <url-pattern>/DownloadJar.do</url-pattern>
+    </servlet-mapping>
+
 
     <welcome-file-list>
         <welcome-file>ShowTutorials.do</welcome-file>
