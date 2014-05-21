@@ -29,9 +29,9 @@ public class TagUtil {
         }
         for (String text : split) {
             if (escape) {
-                stringBuilder.append(escapeXML(text)).append("</code>");
+                stringBuilder.append("<code>").append(escapeXML(text)).append("</code>");
             } else {
-                stringBuilder.append(text).append("<code>");
+                stringBuilder.append(text);
             }
             escape = !escape;
         }

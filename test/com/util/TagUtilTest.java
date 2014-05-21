@@ -43,4 +43,11 @@ public class TagUtilTest {
         Assert.assertEquals("Incorrect escape", expectedText, TagUtil.escapeCodeXml(xml));
     }
 
+    @Test
+    public void codeInText() {
+        String xml = "text<code><b>text</b></code>text";
+        String expectedText = "text<code>&lt;b&gt;text&lt;/b&gt;</code>text";
+        Assert.assertEquals("Incorrect escape", expectedText, TagUtil.escapeCodeXml(xml));
+    }
+
 }
