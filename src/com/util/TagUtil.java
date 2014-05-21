@@ -19,14 +19,19 @@ public class TagUtil {
         return str.replaceAll("\\[" + NEW_LINE + "\\]", "<br/>").replaceAll("\\[" + CODE + "\\]", "<" + CODE + ">").replaceAll("\\[" + END + "\\]", "</" + CODE + ">");
     }
 
-    public static String escapeCodeXml(String str) {
+    public static String escapeCodeXml(final String str) {
         StringBuilder stringBuilder = new StringBuilder();
         boolean escape = false;
-        for (String text : toXML(str).split("</{0,1}code>")) {
+        String xmlValue = toXML(str);
+        String[] split = toXML(xmlValue).split("</{0,1}code>");
+        if (split.length < 2) {
+            return xmlValue;
+        }
+        for (String text : split) {
             if (escape) {
-                stringBuilder.append("<code>").append(escapeXML(text));
+                stringBuilder.append(escapeXML(text)).append("</code>");
             } else {
-                stringBuilder.append(text).append("</code>");
+                stringBuilder.append(text).append("<code>");
             }
             escape = !escape;
         }
