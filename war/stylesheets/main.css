@@ -16,6 +16,7 @@ code {
     font-size: 14px;
     font-family: courier;
     width: 894;
+    border: 1px dashed;
 }
 
 .center {
